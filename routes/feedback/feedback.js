@@ -20,7 +20,7 @@ const feedback = {
           ) {
             return reply.code(400).send({ success: false, message: "Rating must be a number between 1 and 5" });
           }
-          if (!feedback || typeof feedback !== "string" || feedback.trim().length < 5) {
+          if (!feedback || typeof feedback !== "string" || feedback.trim().length < 4) {
             return reply.code(400).send({ success: false, message: "Feedback must be at least 5 characters long" });
           }
       
